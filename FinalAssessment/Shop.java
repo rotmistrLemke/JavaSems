@@ -6,6 +6,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
+
+
+
+
 public class Shop {
     private List<Notebook> notebooks;
     private Scanner scanner;
@@ -31,25 +35,26 @@ public class Shop {
 
         while (!filterAdd) {
             int filter = scanner.nextInt();
+            scanner.nextLine(); // очистка буфера после ввода числа
             switch (filter) {
                 case 1:
                     System.out.print("Введите минимальный объем ОЗУ: ");
-                    filters.put("ОЗУ", scanner.next());
+                    filters.put("ОЗУ", scanner.nextLine());
                     filterAdd = true;
                     break;
                 case 2:
                     System.out.print("Введите минимальный объем ЖД: ");
-                    filters.put("ЖД", scanner.next());
+                    filters.put("ЖД", scanner.nextLine());
                     filterAdd = true;
                     break;
                 case 3:
                     System.out.print("Введите операционную систему: ");
-                    filters.put("ОС", scanner.next());
+                    filters.put("ОС", scanner.nextLine());
                     filterAdd = true;
                     break;
                 case 4:
                     System.out.print("Введите цвет: ");
-                    filters.put("ЦВЕТ", scanner.next());
+                    filters.put("ЦВЕТ", scanner.nextLine());
                     filterAdd = true;
                     break;
                 default:
